@@ -1,0 +1,48 @@
+@font-face {
+    font-family: Gilroy;
+    src: url("Gilroy.otf") format("opentype");
+  }
+  
+  body {
+    margin: 0;
+    overflow-y: hidden;
+    background-color: #121212;
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: Gilroy;
+  }
+  
+  #board {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  line,
+  path,
+  circle {
+    stroke-linecap: round;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 0.6s linear forwards;
+  }
+  
+  line {
+    animation-duration: 1s;
+  }
+  
+  text tspan {
+    fill: #fff;
+    text-anchor: middle;
+    fill: #121212;
+    stroke: white;
+    stroke-width: 2px;
+  }
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
